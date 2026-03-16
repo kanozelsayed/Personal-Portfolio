@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzy Elsayed | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Kenzy<span>Elsayed</span></div>
+        <ul id="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div id="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Hi, I'm <span>Kenzy Elsayed</span></h1>
+                <p>A passionate Front-End Developer dedicated to building immersive and interactive web experiences with modern designs.</p>
+                <a href="#projects" class="btn-main">My Projects</a>
+            </div>
+           
+    
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>I am Kenzy Elsayed, a creative Front-End Developer with a strong foundation in web technologies. My journey in tech started with a curiosity for how things work on the internet, which evolved into a professional path of building user-centric applications. I believe in clean code, constant learning, and staying up-to-date with the latest industry trends. Beyond coding, I enjoy solving complex UI challenges and ensuring that every project I touch is responsive, accessible, and visually stunning.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div id="skills-container" class="grid-layout"></div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Latest Work</h2>
+        <div id="projects-container" class="grid-layout"></div>
+    </section>
+
+    
+
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+            <p id="error-msg" style="color: #ff4d4d; display: none; margin-bottom: 10px;"></p>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-box">
+            <span class="close-modal">&times;</span>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+   <footer>
+    <div class="footer-content">
+        <p>&copy; 2025 <span>Kenzy Elsayed</span>. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/kenzy-elsayed-0008b4334" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            
+            <a href="https://github.com/kanozelsayed" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            <a href="mailto:kenzy@example.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
