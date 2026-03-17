@@ -7,7 +7,6 @@ const skillsData = [
     { name: "Responsive Design", icon: "fa-mobile-alt", desc: "Creating websites that work on all screen sizes." }
 ];
 
-
 const projectsData = [
     { title: "Ramadan Planner", desc: "A 30-day spiritual and daily task organizer for the holy month.", icon: "fa-moon" },
     { title: "Recipe App", desc: "Search and save your favorite food recipes with detailed ingredients.", icon: "fa-utensils" },
@@ -15,15 +14,18 @@ const projectsData = [
     { title: "Memory Game", desc: "A fun interactive card-matching game to test your memory skills.", icon: "fa-brain" }
 ];
 
-
 document.addEventListener("DOMContentLoaded", () => {
 
-
+    // 1. Rendering Skills
     const skillsContainer = document.getElementById("skills-container");
     if (skillsContainer) {
         skillsData.forEach((skill) => {
             const div = document.createElement("div");
             div.className = "card";
+            
+            // --- التكة الجديدة هنا (الأنميشن للكروت) ---
+            div.setAttribute('data-aos', 'fade-up');
+            
             div.innerHTML = `
                 <i class="fab ${skill.icon}"></i>
                 <h3>${skill.name}</h3>
@@ -42,12 +44,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    
+    // 2. Rendering Projects
     const projectsContainer = document.getElementById("projects-container");
     if (projectsContainer) {
         projectsData.forEach((p) => {
             const div = document.createElement("div");
             div.className = "card project-card";
+            
+            // --- التكة الجديدة هنا (الأنميشن للمشاريع) ---
+            div.setAttribute('data-aos', 'zoom-in');
+            
             div.innerHTML = `
                 <i class="fas ${p.icon}" style="font-size:35px; color:#00d4ff; margin-bottom:15px;"></i>
                 <h3>${p.title}</h3>
@@ -57,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    
+    // 3. Modal logic
     const modal = document.getElementById("modal");
     window.onclick = (e) => {
         if (e.target === modal || e.target.classList.contains("close-modal")) {
@@ -65,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-
+    // 4. Form Logic
     const contactForm = document.getElementById("contact-form");
     if (contactForm) {
         contactForm.onsubmit = function (e) {
@@ -76,12 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 err.textContent = "Please enter at least 10 characters.";
                 err.style.display = "block";
             } else {
-                alert("Thank you, Your message has been sent successfully.");
+                alert("Thank you, Kenzy! Your message has been sent successfully.");
             }
         };
     }
 
-    
+    // 5. Menu Logic
     const hamburger = document.getElementById("hamburger");
     if (hamburger) {
         hamburger.onclick = () => {
