@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenzy Elsayed | Portfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -21,38 +22,34 @@
         <div id="hamburger"><i class="fas fa-bars"></i></div>
     </nav>
 
-    <section id="hero">
+    <section id="hero" data-aos="zoom-in">
         <div class="hero-container">
             <div class="hero-text">
                 <h1>Hi, I'm <span>Kenzy Elsayed</span></h1>
                 <p>A passionate Front-End Developer dedicated to building immersive and interactive web experiences with modern designs.</p>
                 <a href="#projects" class="btn-main">My Projects</a>
             </div>
-           
-    
-        </div>
+            </div>
     </section>
 
-    <section id="about">
+    <section id="about" data-aos="fade-right">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <p>I am Kenzy Elsayed, a creative Front-End Developer with a strong foundation in web technologies. My journey in tech started with a curiosity for how things work on the internet, which evolved into a professional path of building user-centric applications. I believe in clean code, constant learning, and staying up-to-date with the latest industry trends. Beyond coding, I enjoy solving complex UI challenges and ensuring that every project I touch is responsive, accessible, and visually stunning.</p>
+            <p>I am Kenzy Elsayed, a creative Front-End Developer with a strong foundation in web technologies. My journey in tech started with a curiosity for how things work on the internet, which evolved into a professional path of building user-centric applications.</p>
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" data-aos="fade-up">
         <h2 class="section-title">Technical Skills</h2>
         <div id="skills-container" class="grid-layout"></div>
     </section>
 
-    <section id="projects">
+    <section id="projects" data-aos="fade-left">
         <h2 class="section-title">Latest Work</h2>
         <div id="projects-container" class="grid-layout"></div>
     </section>
 
-    
-
-    <section id="contact">
+    <section id="contact" data-aos="flip-down">
         <h2 class="section-title">Contact Me</h2>
         <form id="contact-form">
             <input type="text" id="name" placeholder="Full Name" required>
@@ -70,24 +67,25 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true 
+        });
+    </script>
     <script src="script.js"></script>
-   <footer>
-    <div class="footer-content">
-        <p>&copy; 2026 <span>Kenzy Elsayed</span>. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/kenzy-elsayed-0008b4334" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            
-            <a href="https://github.com/kanozelsayed" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            
-            <a href="mailto:kenzy@example.com">
-                <i class="fas fa-envelope"></i>
-            </a>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 <span>Kenzy Elsayed</span>. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/kenzy-elsayed-0008b4334" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/kanozelsayed" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:kenzy@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
